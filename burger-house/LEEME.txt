@@ -1,0 +1,69 @@
+# 🍔 Burger House - Sistema de Gestión
+
+## ¿Cómo iniciar el proyecto?
+
+### Paso 1: Iniciar el Backend
+1. Hacer **doble clic** en `INICIAR_BACKEND.bat`
+2. Esperar a que diga: `Uvicorn running on http://127.0.0.1:8000`
+3. **NO cerrar** esta ventana
+
+### Paso 2: Iniciar el Frontend
+1. Hacer **doble clic** en `INICIAR_FRONTEND.bat`
+2. Esperar a que diga: `Local: http://localhost:5173`
+
+### Paso 3: Usar la aplicación
+1. Abrir el navegador (Chrome, Edge, etc.)
+2. Ir a: **http://localhost:5173**
+
+---
+
+## ¿Qué hacer si no funciona?
+
+### Error "python no se reconoce"
+- Instalar Python desde: https://www.python.org/downloads/
+- Durante la instalación, marcar **"Add Python to PATH"**
+
+### Error "npm no se reconoce"
+- Instalar Node.js desde: https://nodejs.org/
+
+### Error de puerto
+- Si el puerto 8000 está ocupado, cerrar otras aplicaciones
+- Si el puerto 5173 está ocupado, el frontend se abrirá en otro puerto
+
+---
+
+## Para el examen oral
+
+### Archivos importantes del Backend:
+- `app/models.py` - Modelos de base de datos
+- `app/schemas.py` - Validación de datos
+- `app/repository.py` - Unit of Work + Repository
+- `app/services.py` - Lógica de negocio
+- `app/routers.py` - Endpoints de la API
+
+### Archivos importantes del Frontend:
+- `src/pages/*.jsx` - Las páginas (Categorias, Productos, etc.)
+- `src/services/api.js` - Llama al backend
+- `src/components/Navbar.jsx` - Menú de navegación
+
+---
+
+## Conceptos clave para el oral
+
+### Unidad 5 (la más importante):
+- **Unit of Work**: Agrupa operaciones en una transacción. Si falla una, se hace rollback de todas.
+- **Repository Pattern**: Abstrae el acceso a la base de datos.
+
+### Unidad 4:
+- **React Query**: 
+  - `useQuery` = leer datos
+  - `useMutation` = crear/editar/eliminar
+
+### Unidad 1-2:
+- **FastAPI**: Framework web de Python
+- **Pydantic**: Valida datos automáticamente
+- **SQLModel**: SQLAlchemy + Pydantic
+
+---
+
+¡Éxitos con el parcial! 🎓
