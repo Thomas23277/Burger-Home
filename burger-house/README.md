@@ -4,7 +4,7 @@ Sistema de gestión integral para un restaurant de hamburguesas, desarrollado co
 
 ## 🎥 Video de Presentación
 
-**Link del video:** [PEGAR LINK DE YOUTUBE/DRIVE AQUÍ]
+**Link del video:** (https://youtu.be/lCkPhimLXms?feature=shared)
 
 ---
 
@@ -150,7 +150,7 @@ Agrupa operaciones en transacciones seguras. Si falla una, se hace rollback de t
 
 ## 👨‍💻 Autor
 
-[Tu Nombre] - Programación 3
+Thomas Agüero - COM3
 
 ## 📄 Licencia
 
