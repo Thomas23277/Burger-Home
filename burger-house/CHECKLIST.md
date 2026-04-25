@@ -26,9 +26,9 @@
 
 ## Video de Presentación
 
-- [x] **Duración**: El video cumple con el tiempo estipulado (15 minutos).
+- [ ] **Duración**: El video cumple con el tiempo estipulado (15 minutos).
 - [x] **Audio/Video**: Voz clara y resolución que permite leer el código.
-- [x] **Demo**: Se muestra el flujo completo desde la creación hasta la persistencia en la DB.
+- [ ] **Demo**: Se muestra el flujo completo desde la creación hasta la persistencia en la DB.
 
 ---
 
