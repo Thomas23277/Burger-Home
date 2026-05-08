@@ -10,8 +10,14 @@ class Categoria(SQLModel, table=True):
     nombre: str = Field(max_length=100)
     descripcion: Optional[str] = None
     imagen_url: Optional[str] = None
+    parent_id: Optional[int] = Field(default=None, foreign_key="categorias.id")
     es_activa: bool = Field(default=True)
 
+    parent: Optional["Categoria"] = Relationship(
+        back_populates="children",
+        sa_relationship_kwargs={"remote_side": "Categoria.id"}
+    )
+    children: List["Categoria"] = Relationship(back_populates="parent")
     productos: List["ProductoCategoria"] = Relationship(back_populates="categoria")
 
 
@@ -92,6 +98,8 @@ class Pedido(SQLModel, table=True):
     created_at: datetime = Field(default_factory=datetime.now)
     updated_at: datetime = Field(default_factory=datetime.now)
 
+    detalles: List["PedidoDetalle"] = Relationship(back_populates="pedido")
+
 
 class PedidoDetalle(SQLModel, table=True):
     __tablename__ = "pedido_detalles"
@@ -102,3 +110,5 @@ class PedidoDetalle(SQLModel, table=True):
     cantidad: int = Field(default=1)
     precio_unitario: float
     notas: Optional[str] = None
+
+    pedido: Optional["Pedido"] = Relationship(back_populates="detalles")

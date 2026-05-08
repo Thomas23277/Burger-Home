@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { getProducto, getProductos } from '../services/api';
+import { getProducto } from '../services/productos';
 
 export default function DetalleProducto() {
   const { id } = useParams<{ id: string }>();
